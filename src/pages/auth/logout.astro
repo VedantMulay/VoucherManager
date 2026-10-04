@@ -1,0 +1,11 @@
+<script>
+  import { authClient } from '../../lib/auth-client'
+
+  await authClient.signOut({
+    fetchOptions: {
+      onSuccess: () => {
+       window.location.href = "/auth/login";
+      },
+    },
+  });
+</script>
